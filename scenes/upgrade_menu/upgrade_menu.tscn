@@ -1,0 +1,2220 @@
+[gd_scene load_steps=109 format=3 uid="uid://scvrkdu0apku"]
+
+[ext_resource type="Script" path="res://scenes/upgrade_menu/upgrade_menu.gd" id="1_d3twq"]
+[ext_resource type="Texture2D" uid="uid://dheat8h0o4wpl" path="res://assets/background/UpgradeBG.png" id="1_eugod"]
+[ext_resource type="TileSet" uid="uid://dnwx7ksm8f7nb" path="res://assets/UI/UI_panels.tres" id="2_y83lv"]
+[ext_resource type="Script" path="res://scenes/upgrade_menu/WaveNum.gd" id="4_tauxd"]
+[ext_resource type="Texture2D" uid="uid://ba8m87jj70de1" path="res://assets/UI/Border All 9.png" id="4_uu1yh"]
+[ext_resource type="Script" path="res://scenes/upgrade_menu/Scrap_Count.gd" id="5_515ir"]
+[ext_resource type="Texture2D" uid="uid://c12o1mc615vw3" path="res://assets/UI/upgrade_button.tres" id="6_8sg7o"]
+[ext_resource type="Texture2D" uid="uid://nsq026xqrely" path="res://assets/sprites/planet/planet_animation.png" id="7_4k4i5"]
+[ext_resource type="Texture2D" uid="uid://d4eihua1mopxe" path="res://assets/sprites/meteor/Asteroid 01 - Explode.png" id="8_ab3sp"]
+[ext_resource type="Texture2D" uid="uid://c5ap8wlo81boi" path="res://assets/sprites/gun(s)/AK47/AK 47 [96x48].png" id="9_5jm8k"]
+[ext_resource type="Texture2D" uid="uid://dftxnhm5y1qob" path="res://assets/sprites/gun(s)/AK47/[SHOOT WITH MUZZLE FLASH] FULL AUTO - AK 47.png" id="10_xeqqr"]
+[ext_resource type="Script" path="res://scenes/upgrade_menu/Health_Cost.gd" id="11_cjv7i"]
+[ext_resource type="Texture2D" uid="uid://dkllywmn0jcmp" path="res://assets/sprites/gun(s)/MP5A3/Submachine - MP5A3 [80x48].png" id="11_fo5yl"]
+[ext_resource type="Script" path="res://scenes/upgrade_menu/Fire_Rate_Cost.gd" id="12_c15sl"]
+[ext_resource type="Texture2D" uid="uid://b77d83e6jvj42" path="res://assets/sprites/gun(s)/MP5A3/[SHOOT WITH MUZZLE FLASH] Submachine - MP5A3.png" id="12_enate"]
+[ext_resource type="Script" path="res://scenes/upgrade_menu/Gun_Cost.gd" id="13_dhpf7"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yh4w6"]
+texture = ExtResource("4_uu1yh")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+16:0/0 = 0
+17:0/0 = 0
+18:0/0 = 0
+19:0/0 = 0
+20:0/0 = 0
+21:0/0 = 0
+22:0/0 = 0
+23:0/0 = 0
+24:0/0 = 0
+25:0/0 = 0
+26:0/0 = 0
+27:0/0 = 0
+28:0/0 = 0
+29:0/0 = 0
+30:0/0 = 0
+31:0/0 = 0
+32:0/0 = 0
+33:0/0 = 0
+34:0/0 = 0
+35:0/0 = 0
+36:0/0 = 0
+37:0/0 = 0
+38:0/0 = 0
+39:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+16:1/0 = 0
+17:1/0 = 0
+18:1/0 = 0
+19:1/0 = 0
+20:1/0 = 0
+21:1/0 = 0
+22:1/0 = 0
+23:1/0 = 0
+24:1/0 = 0
+25:1/0 = 0
+26:1/0 = 0
+27:1/0 = 0
+28:1/0 = 0
+29:1/0 = 0
+30:1/0 = 0
+31:1/0 = 0
+32:1/0 = 0
+33:1/0 = 0
+34:1/0 = 0
+35:1/0 = 0
+36:1/0 = 0
+37:1/0 = 0
+38:1/0 = 0
+39:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+16:2/0 = 0
+17:2/0 = 0
+18:2/0 = 0
+19:2/0 = 0
+20:2/0 = 0
+21:2/0 = 0
+22:2/0 = 0
+23:2/0 = 0
+24:2/0 = 0
+25:2/0 = 0
+26:2/0 = 0
+27:2/0 = 0
+28:2/0 = 0
+29:2/0 = 0
+30:2/0 = 0
+31:2/0 = 0
+32:2/0 = 0
+33:2/0 = 0
+34:2/0 = 0
+35:2/0 = 0
+36:2/0 = 0
+37:2/0 = 0
+38:2/0 = 0
+39:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+16:3/0 = 0
+17:3/0 = 0
+18:3/0 = 0
+19:3/0 = 0
+20:3/0 = 0
+21:3/0 = 0
+22:3/0 = 0
+23:3/0 = 0
+24:3/0 = 0
+25:3/0 = 0
+26:3/0 = 0
+27:3/0 = 0
+28:3/0 = 0
+29:3/0 = 0
+30:3/0 = 0
+31:3/0 = 0
+32:3/0 = 0
+33:3/0 = 0
+34:3/0 = 0
+35:3/0 = 0
+36:3/0 = 0
+37:3/0 = 0
+38:3/0 = 0
+39:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+16:4/0 = 0
+17:4/0 = 0
+18:4/0 = 0
+19:4/0 = 0
+20:4/0 = 0
+21:4/0 = 0
+22:4/0 = 0
+23:4/0 = 0
+24:4/0 = 0
+25:4/0 = 0
+26:4/0 = 0
+27:4/0 = 0
+28:4/0 = 0
+29:4/0 = 0
+30:4/0 = 0
+31:4/0 = 0
+32:4/0 = 0
+33:4/0 = 0
+34:4/0 = 0
+35:4/0 = 0
+36:4/0 = 0
+37:4/0 = 0
+38:4/0 = 0
+39:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+16:5/0 = 0
+17:5/0 = 0
+18:5/0 = 0
+19:5/0 = 0
+20:5/0 = 0
+21:5/0 = 0
+22:5/0 = 0
+23:5/0 = 0
+24:5/0 = 0
+25:5/0 = 0
+26:5/0 = 0
+27:5/0 = 0
+28:5/0 = 0
+29:5/0 = 0
+30:5/0 = 0
+31:5/0 = 0
+32:5/0 = 0
+33:5/0 = 0
+34:5/0 = 0
+35:5/0 = 0
+36:5/0 = 0
+37:5/0 = 0
+38:5/0 = 0
+39:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+16:6/0 = 0
+17:6/0 = 0
+18:6/0 = 0
+19:6/0 = 0
+20:6/0 = 0
+21:6/0 = 0
+22:6/0 = 0
+23:6/0 = 0
+24:6/0 = 0
+25:6/0 = 0
+26:6/0 = 0
+27:6/0 = 0
+28:6/0 = 0
+29:6/0 = 0
+30:6/0 = 0
+31:6/0 = 0
+32:6/0 = 0
+33:6/0 = 0
+34:6/0 = 0
+35:6/0 = 0
+36:6/0 = 0
+37:6/0 = 0
+38:6/0 = 0
+39:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+15:7/0 = 0
+16:7/0 = 0
+17:7/0 = 0
+18:7/0 = 0
+19:7/0 = 0
+20:7/0 = 0
+21:7/0 = 0
+22:7/0 = 0
+23:7/0 = 0
+24:7/0 = 0
+25:7/0 = 0
+26:7/0 = 0
+27:7/0 = 0
+28:7/0 = 0
+29:7/0 = 0
+30:7/0 = 0
+31:7/0 = 0
+32:7/0 = 0
+33:7/0 = 0
+34:7/0 = 0
+35:7/0 = 0
+36:7/0 = 0
+37:7/0 = 0
+38:7/0 = 0
+39:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+15:8/0 = 0
+16:8/0 = 0
+17:8/0 = 0
+18:8/0 = 0
+19:8/0 = 0
+20:8/0 = 0
+21:8/0 = 0
+22:8/0 = 0
+23:8/0 = 0
+24:8/0 = 0
+25:8/0 = 0
+26:8/0 = 0
+27:8/0 = 0
+28:8/0 = 0
+29:8/0 = 0
+30:8/0 = 0
+31:8/0 = 0
+32:8/0 = 0
+33:8/0 = 0
+34:8/0 = 0
+35:8/0 = 0
+36:8/0 = 0
+37:8/0 = 0
+38:8/0 = 0
+39:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+14:9/0 = 0
+15:9/0 = 0
+16:9/0 = 0
+17:9/0 = 0
+18:9/0 = 0
+19:9/0 = 0
+20:9/0 = 0
+21:9/0 = 0
+22:9/0 = 0
+23:9/0 = 0
+24:9/0 = 0
+25:9/0 = 0
+26:9/0 = 0
+27:9/0 = 0
+28:9/0 = 0
+29:9/0 = 0
+30:9/0 = 0
+31:9/0 = 0
+32:9/0 = 0
+33:9/0 = 0
+34:9/0 = 0
+35:9/0 = 0
+36:9/0 = 0
+37:9/0 = 0
+38:9/0 = 0
+39:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+12:10/0 = 0
+13:10/0 = 0
+14:10/0 = 0
+15:10/0 = 0
+16:10/0 = 0
+17:10/0 = 0
+18:10/0 = 0
+19:10/0 = 0
+20:10/0 = 0
+21:10/0 = 0
+22:10/0 = 0
+23:10/0 = 0
+24:10/0 = 0
+25:10/0 = 0
+26:10/0 = 0
+27:10/0 = 0
+28:10/0 = 0
+29:10/0 = 0
+30:10/0 = 0
+31:10/0 = 0
+32:10/0 = 0
+33:10/0 = 0
+34:10/0 = 0
+35:10/0 = 0
+36:10/0 = 0
+37:10/0 = 0
+38:10/0 = 0
+39:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+6:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+9:11/0 = 0
+10:11/0 = 0
+11:11/0 = 0
+12:11/0 = 0
+13:11/0 = 0
+14:11/0 = 0
+15:11/0 = 0
+16:11/0 = 0
+17:11/0 = 0
+18:11/0 = 0
+19:11/0 = 0
+20:11/0 = 0
+21:11/0 = 0
+22:11/0 = 0
+23:11/0 = 0
+24:11/0 = 0
+25:11/0 = 0
+26:11/0 = 0
+27:11/0 = 0
+28:11/0 = 0
+29:11/0 = 0
+30:11/0 = 0
+31:11/0 = 0
+32:11/0 = 0
+33:11/0 = 0
+34:11/0 = 0
+35:11/0 = 0
+36:11/0 = 0
+37:11/0 = 0
+38:11/0 = 0
+39:11/0 = 0
+0:12/0 = 0
+1:12/0 = 0
+2:12/0 = 0
+3:12/0 = 0
+4:12/0 = 0
+5:12/0 = 0
+6:12/0 = 0
+7:12/0 = 0
+8:12/0 = 0
+9:12/0 = 0
+10:12/0 = 0
+11:12/0 = 0
+12:12/0 = 0
+13:12/0 = 0
+14:12/0 = 0
+15:12/0 = 0
+16:12/0 = 0
+17:12/0 = 0
+18:12/0 = 0
+19:12/0 = 0
+20:12/0 = 0
+21:12/0 = 0
+22:12/0 = 0
+23:12/0 = 0
+24:12/0 = 0
+25:12/0 = 0
+26:12/0 = 0
+27:12/0 = 0
+28:12/0 = 0
+29:12/0 = 0
+30:12/0 = 0
+31:12/0 = 0
+32:12/0 = 0
+33:12/0 = 0
+34:12/0 = 0
+35:12/0 = 0
+36:12/0 = 0
+37:12/0 = 0
+38:12/0 = 0
+39:12/0 = 0
+0:13/0 = 0
+1:13/0 = 0
+2:13/0 = 0
+3:13/0 = 0
+4:13/0 = 0
+5:13/0 = 0
+6:13/0 = 0
+7:13/0 = 0
+8:13/0 = 0
+9:13/0 = 0
+10:13/0 = 0
+11:13/0 = 0
+12:13/0 = 0
+13:13/0 = 0
+14:13/0 = 0
+15:13/0 = 0
+16:13/0 = 0
+17:13/0 = 0
+18:13/0 = 0
+19:13/0 = 0
+20:13/0 = 0
+21:13/0 = 0
+22:13/0 = 0
+23:13/0 = 0
+24:13/0 = 0
+25:13/0 = 0
+26:13/0 = 0
+27:13/0 = 0
+28:13/0 = 0
+29:13/0 = 0
+30:13/0 = 0
+31:13/0 = 0
+32:13/0 = 0
+33:13/0 = 0
+34:13/0 = 0
+35:13/0 = 0
+36:13/0 = 0
+37:13/0 = 0
+38:13/0 = 0
+39:13/0 = 0
+0:14/0 = 0
+1:14/0 = 0
+2:14/0 = 0
+3:14/0 = 0
+4:14/0 = 0
+5:14/0 = 0
+6:14/0 = 0
+7:14/0 = 0
+8:14/0 = 0
+9:14/0 = 0
+10:14/0 = 0
+11:14/0 = 0
+12:14/0 = 0
+13:14/0 = 0
+14:14/0 = 0
+15:14/0 = 0
+16:14/0 = 0
+17:14/0 = 0
+18:14/0 = 0
+19:14/0 = 0
+20:14/0 = 0
+21:14/0 = 0
+22:14/0 = 0
+23:14/0 = 0
+24:14/0 = 0
+25:14/0 = 0
+26:14/0 = 0
+27:14/0 = 0
+28:14/0 = 0
+29:14/0 = 0
+30:14/0 = 0
+31:14/0 = 0
+32:14/0 = 0
+33:14/0 = 0
+34:14/0 = 0
+35:14/0 = 0
+36:14/0 = 0
+37:14/0 = 0
+38:14/0 = 0
+39:14/0 = 0
+0:15/0 = 0
+1:15/0 = 0
+2:15/0 = 0
+3:15/0 = 0
+4:15/0 = 0
+5:15/0 = 0
+6:15/0 = 0
+7:15/0 = 0
+8:15/0 = 0
+9:15/0 = 0
+10:15/0 = 0
+11:15/0 = 0
+12:15/0 = 0
+13:15/0 = 0
+14:15/0 = 0
+15:15/0 = 0
+16:15/0 = 0
+17:15/0 = 0
+18:15/0 = 0
+19:15/0 = 0
+20:15/0 = 0
+21:15/0 = 0
+22:15/0 = 0
+23:15/0 = 0
+24:15/0 = 0
+25:15/0 = 0
+26:15/0 = 0
+27:15/0 = 0
+28:15/0 = 0
+29:15/0 = 0
+30:15/0 = 0
+31:15/0 = 0
+32:15/0 = 0
+33:15/0 = 0
+34:15/0 = 0
+35:15/0 = 0
+36:15/0 = 0
+37:15/0 = 0
+38:15/0 = 0
+39:15/0 = 0
+0:16/0 = 0
+1:16/0 = 0
+2:16/0 = 0
+3:16/0 = 0
+4:16/0 = 0
+5:16/0 = 0
+6:16/0 = 0
+7:16/0 = 0
+8:16/0 = 0
+9:16/0 = 0
+10:16/0 = 0
+11:16/0 = 0
+12:16/0 = 0
+13:16/0 = 0
+14:16/0 = 0
+15:16/0 = 0
+16:16/0 = 0
+17:16/0 = 0
+18:16/0 = 0
+19:16/0 = 0
+20:16/0 = 0
+21:16/0 = 0
+22:16/0 = 0
+23:16/0 = 0
+24:16/0 = 0
+25:16/0 = 0
+26:16/0 = 0
+27:16/0 = 0
+28:16/0 = 0
+29:16/0 = 0
+30:16/0 = 0
+31:16/0 = 0
+32:16/0 = 0
+33:16/0 = 0
+34:16/0 = 0
+35:16/0 = 0
+36:16/0 = 0
+37:16/0 = 0
+38:16/0 = 0
+39:16/0 = 0
+0:17/0 = 0
+1:17/0 = 0
+2:17/0 = 0
+3:17/0 = 0
+4:17/0 = 0
+5:17/0 = 0
+6:17/0 = 0
+7:17/0 = 0
+8:17/0 = 0
+9:17/0 = 0
+10:17/0 = 0
+11:17/0 = 0
+12:17/0 = 0
+13:17/0 = 0
+14:17/0 = 0
+15:17/0 = 0
+16:17/0 = 0
+17:17/0 = 0
+18:17/0 = 0
+19:17/0 = 0
+20:17/0 = 0
+21:17/0 = 0
+22:17/0 = 0
+23:17/0 = 0
+24:17/0 = 0
+25:17/0 = 0
+26:17/0 = 0
+27:17/0 = 0
+28:17/0 = 0
+29:17/0 = 0
+30:17/0 = 0
+31:17/0 = 0
+32:17/0 = 0
+33:17/0 = 0
+34:17/0 = 0
+35:17/0 = 0
+36:17/0 = 0
+37:17/0 = 0
+38:17/0 = 0
+39:17/0 = 0
+0:18/0 = 0
+1:18/0 = 0
+2:18/0 = 0
+3:18/0 = 0
+4:18/0 = 0
+5:18/0 = 0
+6:18/0 = 0
+7:18/0 = 0
+8:18/0 = 0
+9:18/0 = 0
+10:18/0 = 0
+11:18/0 = 0
+12:18/0 = 0
+13:18/0 = 0
+14:18/0 = 0
+15:18/0 = 0
+16:18/0 = 0
+17:18/0 = 0
+18:18/0 = 0
+19:18/0 = 0
+20:18/0 = 0
+21:18/0 = 0
+22:18/0 = 0
+23:18/0 = 0
+24:18/0 = 0
+25:18/0 = 0
+26:18/0 = 0
+27:18/0 = 0
+28:18/0 = 0
+29:18/0 = 0
+30:18/0 = 0
+31:18/0 = 0
+32:18/0 = 0
+33:18/0 = 0
+34:18/0 = 0
+35:18/0 = 0
+36:18/0 = 0
+37:18/0 = 0
+38:18/0 = 0
+39:18/0 = 0
+0:19/0 = 0
+1:19/0 = 0
+2:19/0 = 0
+3:19/0 = 0
+4:19/0 = 0
+5:19/0 = 0
+6:19/0 = 0
+7:19/0 = 0
+8:19/0 = 0
+9:19/0 = 0
+10:19/0 = 0
+11:19/0 = 0
+12:19/0 = 0
+13:19/0 = 0
+14:19/0 = 0
+15:19/0 = 0
+16:19/0 = 0
+17:19/0 = 0
+18:19/0 = 0
+19:19/0 = 0
+20:19/0 = 0
+21:19/0 = 0
+22:19/0 = 0
+23:19/0 = 0
+24:19/0 = 0
+25:19/0 = 0
+26:19/0 = 0
+27:19/0 = 0
+28:19/0 = 0
+29:19/0 = 0
+30:19/0 = 0
+31:19/0 = 0
+32:19/0 = 0
+33:19/0 = 0
+34:19/0 = 0
+35:19/0 = 0
+36:19/0 = 0
+37:19/0 = 0
+38:19/0 = 0
+39:19/0 = 0
+0:20/0 = 0
+1:20/0 = 0
+2:20/0 = 0
+3:20/0 = 0
+4:20/0 = 0
+5:20/0 = 0
+6:20/0 = 0
+7:20/0 = 0
+8:20/0 = 0
+9:20/0 = 0
+10:20/0 = 0
+11:20/0 = 0
+12:20/0 = 0
+13:20/0 = 0
+14:20/0 = 0
+15:20/0 = 0
+16:20/0 = 0
+17:20/0 = 0
+18:20/0 = 0
+19:20/0 = 0
+20:20/0 = 0
+21:20/0 = 0
+22:20/0 = 0
+23:20/0 = 0
+24:20/0 = 0
+25:20/0 = 0
+26:20/0 = 0
+27:20/0 = 0
+28:20/0 = 0
+29:20/0 = 0
+30:20/0 = 0
+31:20/0 = 0
+32:20/0 = 0
+33:20/0 = 0
+34:20/0 = 0
+35:20/0 = 0
+36:20/0 = 0
+37:20/0 = 0
+38:20/0 = 0
+39:20/0 = 0
+0:21/0 = 0
+1:21/0 = 0
+2:21/0 = 0
+3:21/0 = 0
+4:21/0 = 0
+5:21/0 = 0
+6:21/0 = 0
+7:21/0 = 0
+8:21/0 = 0
+9:21/0 = 0
+10:21/0 = 0
+11:21/0 = 0
+12:21/0 = 0
+13:21/0 = 0
+14:21/0 = 0
+15:21/0 = 0
+16:21/0 = 0
+17:21/0 = 0
+18:21/0 = 0
+19:21/0 = 0
+20:21/0 = 0
+21:21/0 = 0
+22:21/0 = 0
+23:21/0 = 0
+24:21/0 = 0
+25:21/0 = 0
+26:21/0 = 0
+27:21/0 = 0
+28:21/0 = 0
+29:21/0 = 0
+30:21/0 = 0
+31:21/0 = 0
+32:21/0 = 0
+33:21/0 = 0
+34:21/0 = 0
+35:21/0 = 0
+36:21/0 = 0
+37:21/0 = 0
+38:21/0 = 0
+39:21/0 = 0
+0:22/0 = 0
+1:22/0 = 0
+2:22/0 = 0
+3:22/0 = 0
+4:22/0 = 0
+5:22/0 = 0
+6:22/0 = 0
+7:22/0 = 0
+8:22/0 = 0
+9:22/0 = 0
+10:22/0 = 0
+11:22/0 = 0
+12:22/0 = 0
+13:22/0 = 0
+14:22/0 = 0
+15:22/0 = 0
+16:22/0 = 0
+17:22/0 = 0
+18:22/0 = 0
+19:22/0 = 0
+20:22/0 = 0
+21:22/0 = 0
+22:22/0 = 0
+23:22/0 = 0
+24:22/0 = 0
+25:22/0 = 0
+26:22/0 = 0
+27:22/0 = 0
+28:22/0 = 0
+29:22/0 = 0
+30:22/0 = 0
+31:22/0 = 0
+32:22/0 = 0
+33:22/0 = 0
+34:22/0 = 0
+35:22/0 = 0
+36:22/0 = 0
+37:22/0 = 0
+38:22/0 = 0
+39:22/0 = 0
+0:23/0 = 0
+1:23/0 = 0
+2:23/0 = 0
+3:23/0 = 0
+4:23/0 = 0
+5:23/0 = 0
+6:23/0 = 0
+7:23/0 = 0
+8:23/0 = 0
+9:23/0 = 0
+10:23/0 = 0
+11:23/0 = 0
+12:23/0 = 0
+13:23/0 = 0
+14:23/0 = 0
+15:23/0 = 0
+16:23/0 = 0
+17:23/0 = 0
+18:23/0 = 0
+19:23/0 = 0
+20:23/0 = 0
+21:23/0 = 0
+22:23/0 = 0
+23:23/0 = 0
+24:23/0 = 0
+25:23/0 = 0
+26:23/0 = 0
+27:23/0 = 0
+28:23/0 = 0
+29:23/0 = 0
+30:23/0 = 0
+31:23/0 = 0
+32:23/0 = 0
+33:23/0 = 0
+34:23/0 = 0
+35:23/0 = 0
+36:23/0 = 0
+37:23/0 = 0
+38:23/0 = 0
+39:23/0 = 0
+0:24/0 = 0
+1:24/0 = 0
+2:24/0 = 0
+3:24/0 = 0
+4:24/0 = 0
+5:24/0 = 0
+6:24/0 = 0
+7:24/0 = 0
+8:24/0 = 0
+9:24/0 = 0
+10:24/0 = 0
+11:24/0 = 0
+12:24/0 = 0
+13:24/0 = 0
+14:24/0 = 0
+15:24/0 = 0
+16:24/0 = 0
+17:24/0 = 0
+18:24/0 = 0
+19:24/0 = 0
+20:24/0 = 0
+21:24/0 = 0
+22:24/0 = 0
+23:24/0 = 0
+24:24/0 = 0
+25:24/0 = 0
+26:24/0 = 0
+27:24/0 = 0
+28:24/0 = 0
+29:24/0 = 0
+30:24/0 = 0
+31:24/0 = 0
+32:24/0 = 0
+33:24/0 = 0
+34:24/0 = 0
+35:24/0 = 0
+36:24/0 = 0
+37:24/0 = 0
+38:24/0 = 0
+39:24/0 = 0
+0:25/0 = 0
+1:25/0 = 0
+2:25/0 = 0
+3:25/0 = 0
+4:25/0 = 0
+5:25/0 = 0
+6:25/0 = 0
+7:25/0 = 0
+8:25/0 = 0
+9:25/0 = 0
+10:25/0 = 0
+11:25/0 = 0
+12:25/0 = 0
+13:25/0 = 0
+14:25/0 = 0
+15:25/0 = 0
+16:25/0 = 0
+17:25/0 = 0
+18:25/0 = 0
+19:25/0 = 0
+20:25/0 = 0
+21:25/0 = 0
+22:25/0 = 0
+23:25/0 = 0
+24:25/0 = 0
+25:25/0 = 0
+26:25/0 = 0
+27:25/0 = 0
+28:25/0 = 0
+29:25/0 = 0
+30:25/0 = 0
+31:25/0 = 0
+32:25/0 = 0
+33:25/0 = 0
+34:25/0 = 0
+35:25/0 = 0
+36:25/0 = 0
+37:25/0 = 0
+38:25/0 = 0
+39:25/0 = 0
+0:26/0 = 0
+1:26/0 = 0
+2:26/0 = 0
+3:26/0 = 0
+4:26/0 = 0
+5:26/0 = 0
+6:26/0 = 0
+7:26/0 = 0
+8:26/0 = 0
+9:26/0 = 0
+10:26/0 = 0
+11:26/0 = 0
+12:26/0 = 0
+13:26/0 = 0
+14:26/0 = 0
+15:26/0 = 0
+16:26/0 = 0
+17:26/0 = 0
+18:26/0 = 0
+19:26/0 = 0
+20:26/0 = 0
+21:26/0 = 0
+22:26/0 = 0
+23:26/0 = 0
+24:26/0 = 0
+25:26/0 = 0
+26:26/0 = 0
+27:26/0 = 0
+28:26/0 = 0
+29:26/0 = 0
+30:26/0 = 0
+31:26/0 = 0
+32:26/0 = 0
+33:26/0 = 0
+34:26/0 = 0
+35:26/0 = 0
+36:26/0 = 0
+37:26/0 = 0
+38:26/0 = 0
+39:26/0 = 0
+0:27/0 = 0
+1:27/0 = 0
+2:27/0 = 0
+3:27/0 = 0
+4:27/0 = 0
+5:27/0 = 0
+6:27/0 = 0
+7:27/0 = 0
+8:27/0 = 0
+9:27/0 = 0
+10:27/0 = 0
+11:27/0 = 0
+12:27/0 = 0
+13:27/0 = 0
+14:27/0 = 0
+15:27/0 = 0
+16:27/0 = 0
+17:27/0 = 0
+18:27/0 = 0
+19:27/0 = 0
+20:27/0 = 0
+21:27/0 = 0
+22:27/0 = 0
+23:27/0 = 0
+24:27/0 = 0
+25:27/0 = 0
+26:27/0 = 0
+27:27/0 = 0
+28:27/0 = 0
+29:27/0 = 0
+30:27/0 = 0
+31:27/0 = 0
+32:27/0 = 0
+33:27/0 = 0
+34:27/0 = 0
+35:27/0 = 0
+36:27/0 = 0
+37:27/0 = 0
+38:27/0 = 0
+39:27/0 = 0
+0:28/0 = 0
+1:28/0 = 0
+2:28/0 = 0
+3:28/0 = 0
+4:28/0 = 0
+5:28/0 = 0
+6:28/0 = 0
+7:28/0 = 0
+8:28/0 = 0
+9:28/0 = 0
+10:28/0 = 0
+11:28/0 = 0
+12:28/0 = 0
+13:28/0 = 0
+14:28/0 = 0
+15:28/0 = 0
+16:28/0 = 0
+17:28/0 = 0
+18:28/0 = 0
+19:28/0 = 0
+20:28/0 = 0
+21:28/0 = 0
+22:28/0 = 0
+23:28/0 = 0
+24:28/0 = 0
+25:28/0 = 0
+26:28/0 = 0
+27:28/0 = 0
+28:28/0 = 0
+29:28/0 = 0
+30:28/0 = 0
+31:28/0 = 0
+32:28/0 = 0
+33:28/0 = 0
+34:28/0 = 0
+35:28/0 = 0
+36:28/0 = 0
+37:28/0 = 0
+38:28/0 = 0
+39:28/0 = 0
+0:29/0 = 0
+1:29/0 = 0
+2:29/0 = 0
+3:29/0 = 0
+4:29/0 = 0
+5:29/0 = 0
+6:29/0 = 0
+7:29/0 = 0
+8:29/0 = 0
+9:29/0 = 0
+10:29/0 = 0
+11:29/0 = 0
+12:29/0 = 0
+13:29/0 = 0
+14:29/0 = 0
+15:29/0 = 0
+16:29/0 = 0
+17:29/0 = 0
+18:29/0 = 0
+19:29/0 = 0
+20:29/0 = 0
+21:29/0 = 0
+22:29/0 = 0
+23:29/0 = 0
+24:29/0 = 0
+25:29/0 = 0
+26:29/0 = 0
+27:29/0 = 0
+28:29/0 = 0
+29:29/0 = 0
+30:29/0 = 0
+31:29/0 = 0
+32:29/0 = 0
+33:29/0 = 0
+34:29/0 = 0
+35:29/0 = 0
+36:29/0 = 0
+37:29/0 = 0
+38:29/0 = 0
+39:29/0 = 0
+0:30/0 = 0
+1:30/0 = 0
+2:30/0 = 0
+3:30/0 = 0
+4:30/0 = 0
+5:30/0 = 0
+6:30/0 = 0
+7:30/0 = 0
+8:30/0 = 0
+9:30/0 = 0
+10:30/0 = 0
+11:30/0 = 0
+12:30/0 = 0
+13:30/0 = 0
+14:30/0 = 0
+15:30/0 = 0
+16:30/0 = 0
+17:30/0 = 0
+18:30/0 = 0
+19:30/0 = 0
+20:30/0 = 0
+21:30/0 = 0
+22:30/0 = 0
+23:30/0 = 0
+24:30/0 = 0
+25:30/0 = 0
+26:30/0 = 0
+27:30/0 = 0
+28:30/0 = 0
+29:30/0 = 0
+30:30/0 = 0
+31:30/0 = 0
+32:30/0 = 0
+33:30/0 = 0
+34:30/0 = 0
+35:30/0 = 0
+36:30/0 = 0
+37:30/0 = 0
+38:30/0 = 0
+39:30/0 = 0
+0:31/0 = 0
+1:31/0 = 0
+2:31/0 = 0
+3:31/0 = 0
+4:31/0 = 0
+5:31/0 = 0
+6:31/0 = 0
+7:31/0 = 0
+8:31/0 = 0
+9:31/0 = 0
+10:31/0 = 0
+11:31/0 = 0
+12:31/0 = 0
+13:31/0 = 0
+14:31/0 = 0
+15:31/0 = 0
+16:31/0 = 0
+17:31/0 = 0
+18:31/0 = 0
+19:31/0 = 0
+20:31/0 = 0
+21:31/0 = 0
+22:31/0 = 0
+23:31/0 = 0
+24:31/0 = 0
+25:31/0 = 0
+26:31/0 = 0
+27:31/0 = 0
+28:31/0 = 0
+29:31/0 = 0
+30:31/0 = 0
+31:31/0 = 0
+32:31/0 = 0
+33:31/0 = 0
+34:31/0 = 0
+35:31/0 = 0
+36:31/0 = 0
+37:31/0 = 0
+38:31/0 = 0
+39:31/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_yjaht"]
+sources/0 = SubResource("TileSetAtlasSource_yh4w6")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_38xqf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xxobt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dk2rt"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d8epr"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ooh2f"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_phfqs"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cqy6t"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2rine"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(400, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uc1wr"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(500, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c0ith"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(600, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bf0l5"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(700, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1e8u8"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(800, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tcyte"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(900, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y01ok"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(1000, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7wt76"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(1100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6t7nh"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(1200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kx82l"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(1300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8c2ef"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(1400, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3a8k7"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(1500, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lqncd"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(1600, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0nru"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(1700, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jgbvn"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(1800, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gv2rk"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(1900, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b1t8j"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(2000, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o5pk5"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(2100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_605dc"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(2200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t283e"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(2300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bb1oe"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(2400, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mxqkq"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(2500, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vo15j"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(2600, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1gs0e"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(2700, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_723rm"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(2800, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_626ic"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(2900, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7s7br"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(3000, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4fmff"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(3100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ymc0"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(3200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tsyyx"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(3300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wijm6"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(3400, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hpwkx"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(3500, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2qej0"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(3600, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tte5x"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(3700, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6it7"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(3800, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wiw2l"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(3900, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ft7h5"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(4000, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q3u0t"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(4100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dsj34"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(4200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_88d8y"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(4300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nkxsn"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(4400, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j4yei"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(4500, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4a38r"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(4600, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vruhd"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(4700, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p15oh"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(4800, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3stei"]
+atlas = ExtResource("7_4k4i5")
+region = Rect2(4900, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_84tk6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dk2rt")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d8epr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ooh2f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_phfqs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cqy6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2rine")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uc1wr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c0ith")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bf0l5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1e8u8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tcyte")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y01ok")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7wt76")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6t7nh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kx82l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8c2ef")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3a8k7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lqncd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r0nru")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jgbvn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gv2rk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b1t8j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o5pk5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_605dc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t283e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bb1oe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mxqkq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vo15j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1gs0e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_723rm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_626ic")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7s7br")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4fmff")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ymc0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tsyyx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wijm6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hpwkx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2qej0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tte5x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f6it7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wiw2l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ft7h5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q3u0t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dsj34")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_88d8y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nkxsn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j4yei")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4a38r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vruhd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p15oh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3stei")
+}],
+"loop": true,
+"name": &"spinning",
+"speed": 8.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oy6cg"]
+atlas = ExtResource("8_ab3sp")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_prhwj"]
+atlas = ExtResource("8_ab3sp")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k3lyu"]
+atlas = ExtResource("8_ab3sp")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0j1qt"]
+atlas = ExtResource("8_ab3sp")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7fmmr"]
+atlas = ExtResource("8_ab3sp")
+region = Rect2(384, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_40mlj"]
+atlas = ExtResource("8_ab3sp")
+region = Rect2(480, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yd8rt"]
+atlas = ExtResource("8_ab3sp")
+region = Rect2(576, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g364m"]
+atlas = ExtResource("8_ab3sp")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m1kew"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oy6cg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_prhwj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k3lyu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0j1qt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7fmmr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_40mlj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yd8rt")
+}],
+"loop": true,
+"name": &"explosion",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g364m")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nh4ej"]
+atlas = ExtResource("9_5jm8k")
+region = Rect2(0, 0, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eddix"]
+atlas = ExtResource("10_xeqqr")
+region = Rect2(0, 0, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s6tw8"]
+atlas = ExtResource("10_xeqqr")
+region = Rect2(96, 0, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_axbkn"]
+atlas = ExtResource("10_xeqqr")
+region = Rect2(192, 0, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5r0s1"]
+atlas = ExtResource("10_xeqqr")
+region = Rect2(288, 0, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8dqti"]
+atlas = ExtResource("10_xeqqr")
+region = Rect2(384, 0, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_juwyo"]
+atlas = ExtResource("10_xeqqr")
+region = Rect2(480, 0, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r7pqs"]
+atlas = ExtResource("10_xeqqr")
+region = Rect2(576, 0, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kcv26"]
+atlas = ExtResource("10_xeqqr")
+region = Rect2(672, 0, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8kjkt"]
+atlas = ExtResource("10_xeqqr")
+region = Rect2(768, 0, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1m4rd"]
+atlas = ExtResource("10_xeqqr")
+region = Rect2(864, 0, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2scam"]
+atlas = ExtResource("10_xeqqr")
+region = Rect2(960, 0, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cdlv1"]
+atlas = ExtResource("10_xeqqr")
+region = Rect2(1056, 0, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uwtse"]
+atlas = ExtResource("11_fo5yl")
+region = Rect2(0, 0, 80, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4nlsh"]
+atlas = ExtResource("12_enate")
+region = Rect2(0, 0, 80, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5s20h"]
+atlas = ExtResource("12_enate")
+region = Rect2(80, 0, 80, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bttak"]
+atlas = ExtResource("12_enate")
+region = Rect2(160, 0, 80, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yc2lb"]
+atlas = ExtResource("12_enate")
+region = Rect2(240, 0, 80, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vlmer"]
+atlas = ExtResource("12_enate")
+region = Rect2(320, 0, 80, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_62cwx"]
+atlas = ExtResource("12_enate")
+region = Rect2(400, 0, 80, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smbpa"]
+atlas = ExtResource("12_enate")
+region = Rect2(480, 0, 80, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0hcd8"]
+atlas = ExtResource("12_enate")
+region = Rect2(560, 0, 80, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n05hq"]
+atlas = ExtResource("12_enate")
+region = Rect2(640, 0, 80, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a11u5"]
+atlas = ExtResource("12_enate")
+region = Rect2(720, 0, 80, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iiucr"]
+atlas = ExtResource("12_enate")
+region = Rect2(800, 0, 80, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8jr0m"]
+atlas = ExtResource("12_enate")
+region = Rect2(880, 0, 80, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q52bg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nh4ej")
+}],
+"loop": true,
+"name": &"ak_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eddix")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s6tw8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_axbkn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5r0s1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8dqti")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_juwyo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r7pqs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kcv26")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8kjkt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1m4rd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2scam")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cdlv1")
+}],
+"loop": true,
+"name": &"ak_shooting",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uwtse")
+}],
+"loop": true,
+"name": &"mp_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4nlsh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5s20h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bttak")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yc2lb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vlmer")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_62cwx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smbpa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0hcd8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n05hq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a11u5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iiucr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8jr0m")
+}],
+"loop": true,
+"name": &"mp_shooting",
+"speed": 35.0
+}]
+
+[node name="UpgradeMenu" type="Node2D"]
+script = ExtResource("1_d3twq")
+
+[node name="BG" type="TextureRect" parent="."]
+offset_top = 8.0
+offset_right = 640.0
+offset_bottom = 368.0
+texture = ExtResource("1_eugod")
+
+[node name="TileMap" type="TileMap" parent="BG"]
+texture_filter = 1
+tile_set = ExtResource("2_y83lv")
+format = 2
+layer_0/tile_data = PackedInt32Array(1245186, 524288, 20, 1245187, 589824, 20, 1245188, 655360, 20, 1245189, 655360, 20, 1310725, 589824, 23, 1310722, 524288, 23, 1310723, 589824, 23, 1310724, 655360, 23, 1245221, 720896, 20, 1245220, 655360, 20, 1245219, 655360, 20, 1245218, 589824, 20, 1310754, 589824, 23, 1310757, 720896, 23, 1310756, 589824, 23, 1310755, 589824, 23, 1245191, 720896, 20, 1310727, 720896, 23, 1245190, 655360, 20, 1310726, 589824, 23, 1245217, 589824, 20, 1245216, 524288, 20, 1310752, 524288, 23, 1310753, 589824, 23, 1048582, 524288, 14, 983046, 524288, 13, 983047, 589824, 14, 983048, 655360, 14, 983049, 589824, 14, 983050, 655360, 14, 1048585, 589824, 13, 1048586, 589824, 13, 1048583, 589824, 13, 1048584, 589824, 13, 1048587, 589824, 13, 1048588, 589824, 13, 1048589, 589824, 13, 1048590, 589824, 13, 1048591, 589824, 13, 1048592, 589824, 13, 1048593, 589824, 13, 1048594, 589824, 13, 1048595, 589824, 13, 1048596, 589824, 13, 1048597, 589824, 13, 1048598, 589824, 13, 1048599, 589824, 13, 1048600, 589824, 13, 1048601, 589824, 13, 1048602, 589824, 13, 1048603, 589824, 13, 1048604, 589824, 13, 1048605, 589824, 13, 1048606, 589824, 13, 1048607, 589824, 13, 1048608, 589824, 13, 1048609, 720896, 13, 131078, 524288, 12, 131079, 589824, 12, 131080, 655360, 12, 131081, 589824, 12, 131082, 655360, 12, 131083, 589824, 12, 131084, 655360, 12, 131085, 589824, 12, 131086, 655360, 12, 131087, 589824, 12, 131088, 655360, 12, 131089, 589824, 12, 131090, 655360, 12, 131091, 589824, 12, 131092, 655360, 12, 131093, 589824, 12, 131094, 655360, 12, 131095, 589824, 12, 131096, 589824, 12, 131097, 655360, 12, 131098, 655360, 12, 131099, 589824, 12, 131100, 655360, 12, 131101, 589824, 12, 131102, 655360, 12, 131103, 589824, 12, 131104, 655360, 12, 131105, 720896, 12, 196614, 524288, 13, 262150, 524288, 13, 196615, 589824, 13, 262151, 589824, 14, 196616, 655360, 13, 262152, 655360, 14, 196617, 589824, 13, 262153, 589824, 14, 196618, 655360, 13, 262154, 655360, 14, 196619, 589824, 13, 262155, 589824, 14, 196620, 655360, 13, 262156, 655360, 14, 196621, 589824, 13, 262157, 589824, 14, 196622, 655360, 13, 262158, 655360, 14, 196623, 589824, 13, 262159, 589824, 14, 196624, 655360, 13, 262160, 655360, 14, 196625, 589824, 13, 262161, 589824, 14, 196626, 655360, 13, 262162, 655360, 14, 196627, 589824, 13, 262163, 589824, 14, 196628, 655360, 13, 262164, 655360, 14, 196629, 589824, 13, 262165, 589824, 14, 196630, 655360, 13, 262166, 655360, 14, 196631, 589824, 13, 262167, 589824, 14, 196632, 589824, 14, 262168, 589824, 13, 327703, 589824, 13, 393239, 589824, 14, 327704, 589824, 14, 393240, 655360, 14, 458775, 589824, 13, 524311, 589824, 13, 458776, 655360, 13, 524312, 655360, 13, 458773, 589824, 13, 524309, 589824, 13, 458774, 655360, 13, 524310, 655360, 13, 458771, 589824, 14, 524307, 589824, 13, 458772, 655360, 14, 524308, 655360, 13, 458769, 589824, 14, 524305, 589824, 13, 458770, 655360, 14, 524306, 655360, 13, 327697, 589824, 13, 393233, 589824, 13, 327698, 655360, 13, 393234, 655360, 13, 327699, 589824, 13, 393235, 589824, 13, 327700, 655360, 13, 393236, 655360, 13, 327701, 589824, 13, 393237, 589824, 14, 327702, 655360, 13, 393238, 655360, 14, 327695, 589824, 13, 393231, 589824, 13, 327696, 655360, 13, 393232, 655360, 13, 327693, 589824, 13, 393229, 589824, 13, 327694, 655360, 13, 393230, 655360, 13, 327691, 589824, 13, 393227, 589824, 14, 327692, 655360, 13, 393228, 655360, 14, 327689, 589824, 13, 393225, 589824, 14, 327690, 655360, 13, 393226, 655360, 14, 327687, 589824, 13, 393223, 589824, 14, 327688, 655360, 13, 393224, 655360, 14, 327686, 524288, 13, 393222, 524288, 13, 458758, 524288, 13, 524294, 524288, 13, 589830, 524288, 13, 655366, 524288, 13, 720902, 524288, 13, 786438, 524288, 13, 851974, 524288, 13, 917510, 524288, 13, 917511, 589824, 13, 917512, 655360, 13, 917513, 589824, 13, 917514, 655360, 13, 917515, 589824, 13, 983051, 589824, 14, 917516, 655360, 13, 983052, 655360, 14, 917517, 589824, 13, 983053, 589824, 14, 917518, 655360, 13, 983054, 655360, 14, 917519, 589824, 13, 983055, 589824, 14, 917520, 655360, 13, 983056, 655360, 14, 917521, 589824, 13, 983057, 589824, 14, 917522, 655360, 13, 983058, 655360, 14, 917523, 589824, 13, 983059, 589824, 14, 917524, 655360, 13, 983060, 655360, 14, 917525, 589824, 13, 983061, 589824, 14, 917526, 655360, 13, 983062, 655360, 14, 917527, 589824, 13, 983063, 589824, 14, 917528, 655360, 13, 983064, 655360, 14, 917529, 589824, 13, 983065, 589824, 14, 917530, 655360, 13, 983066, 655360, 14, 917531, 589824, 13, 983067, 589824, 14, 917532, 655360, 13, 983068, 655360, 14, 917533, 589824, 13, 983069, 589824, 14, 917534, 655360, 13, 983070, 655360, 14, 917535, 589824, 13, 983071, 589824, 14, 917536, 655360, 13, 983072, 655360, 14, 917537, 720896, 14, 983073, 720896, 14, 852001, 720896, 14, 720929, 720896, 14, 786465, 720896, 14, 720927, 589824, 13, 786463, 589824, 13, 720928, 655360, 13, 786464, 655360, 13, 589855, 655360, 14, 655391, 589824, 14, 589856, 655360, 13, 655392, 655360, 14, 458783, 589824, 14, 524319, 655360, 13, 458784, 655360, 14, 524320, 655360, 14, 327711, 589824, 14, 393247, 589824, 13, 327712, 655360, 14, 393248, 655360, 13, 196639, 655360, 13, 262175, 589824, 13, 196640, 655360, 13, 262176, 655360, 13, 196641, 720896, 14, 262177, 720896, 14, 327713, 720896, 14, 393249, 720896, 14, 458785, 720896, 14, 524321, 720896, 14, 589857, 720896, 14, 655393, 720896, 14, 851999, 589824, 14, 852000, 655360, 14, 786461, 589824, 13, 851997, 589824, 14, 786462, 655360, 13, 851998, 655360, 14, 786459, 589824, 13, 851995, 589824, 14, 786460, 655360, 13, 851996, 655360, 14, 786457, 589824, 13, 851993, 589824, 14, 786458, 655360, 13, 851994, 655360, 14, 786455, 589824, 13, 851991, 589824, 14, 786456, 655360, 13, 851992, 655360, 14, 786453, 589824, 13, 851989, 589824, 14, 786454, 655360, 13, 851990, 655360, 14, 786451, 589824, 13, 851987, 589824, 14, 786452, 655360, 13, 851988, 655360, 14, 786449, 589824, 13, 851985, 589824, 14, 786450, 655360, 13, 851986, 655360, 14, 786447, 589824, 13, 851983, 589824, 14, 786448, 655360, 13, 851984, 655360, 14, 786445, 589824, 13, 851981, 589824, 14, 786446, 655360, 13, 851982, 655360, 14, 786443, 589824, 13, 851979, 589824, 14, 786444, 655360, 13, 851980, 655360, 14, 786441, 589824, 13, 851977, 589824, 14, 786442, 655360, 13, 851978, 655360, 14, 786439, 589824, 14, 851975, 589824, 14, 786440, 655360, 14, 851976, 655360, 14, 720903, 589824, 13, 720904, 655360, 13, 589831, 655360, 14, 655367, 589824, 14, 589832, 589824, 14, 655368, 655360, 14, 458759, 589824, 13, 524295, 655360, 13, 458760, 655360, 13, 524296, 589824, 13, 458763, 589824, 13, 524299, 655360, 13, 458764, 655360, 13, 524300, 589824, 13, 458765, 589824, 14, 524301, 655360, 13, 458766, 655360, 14, 524302, 589824, 13, 458761, 589824, 13, 524297, 655360, 13, 458762, 655360, 13, 524298, 589824, 13, 589836, 589824, 14, 589837, 655360, 14, 589834, 589824, 14, 589835, 655360, 14, 655370, 655360, 13, 720906, 655360, 14, 655371, 589824, 13, 720907, 589824, 14, 655372, 655360, 13, 720908, 655360, 14, 655373, 589824, 13, 720909, 589824, 14, 655374, 655360, 13, 720910, 655360, 14, 655375, 589824, 13, 720911, 589824, 14, 589838, 589824, 14, 524303, 589824, 13, 589839, 589824, 14, 589833, 655360, 14, 655369, 589824, 13, 720905, 589824, 14, 655376, 655360, 13, 720912, 655360, 14, 655377, 589824, 13, 720913, 589824, 14, 655378, 655360, 13, 720914, 655360, 14, 655379, 589824, 13, 720915, 589824, 14, 655380, 655360, 13, 720916, 655360, 14, 655381, 589824, 13, 720917, 589824, 14, 655382, 655360, 13, 720918, 655360, 14, 655383, 589824, 13, 720919, 589824, 14, 655384, 655360, 13, 720920, 655360, 14, 655385, 589824, 13, 720921, 589824, 14, 655386, 655360, 13, 720922, 655360, 14, 655387, 589824, 13, 720923, 589824, 14, 655388, 655360, 13, 720924, 655360, 14, 655389, 589824, 13, 720925, 589824, 14, 655390, 655360, 13, 720926, 655360, 14, 524318, 655360, 13, 589854, 655360, 14, 393246, 655360, 13, 458782, 655360, 14, 393244, 655360, 13, 458780, 655360, 14, 393245, 589824, 13, 458781, 589824, 14, 262172, 589824, 14, 327708, 655360, 14, 262173, 655360, 14, 327709, 589824, 14, 196638, 589824, 13, 262174, 655360, 13, 262170, 589824, 14, 327706, 655360, 14, 262171, 655360, 14, 327707, 589824, 14, 262169, 589824, 13, 327705, 589824, 14, 196633, 655360, 14, 327710, 655360, 14, 393243, 589824, 13, 458779, 589824, 14, 393241, 589824, 13, 458777, 589824, 14, 393242, 655360, 13, 458778, 655360, 14, 524313, 589824, 13, 589849, 589824, 14, 524314, 655360, 13, 589850, 655360, 14, 589847, 589824, 14, 589848, 655360, 14, 589845, 589824, 14, 589846, 655360, 14, 589843, 589824, 14, 589844, 655360, 14, 589841, 589824, 14, 589842, 655360, 14, 524304, 655360, 13, 589840, 655360, 14, 458767, 589824, 14, 458768, 655360, 14, 524315, 589824, 13, 589851, 589824, 14, 524316, 655360, 13, 589852, 655360, 14, 524317, 589824, 13, 589853, 589824, 14, 196636, 589824, 13, 196637, 655360, 13, 196634, 589824, 13, 196635, 655360, 13, 1114119, 589824, 15, 1114120, 589824, 15, 1114121, 589824, 15, 1114122, 589824, 15, 1114123, 589824, 15, 1114124, 589824, 15, 1114125, 589824, 15, 1114126, 589824, 15, 1114127, 589824, 15, 1114128, 589824, 15, 1114129, 589824, 15, 1114130, 589824, 15, 1114131, 589824, 15, 1114132, 589824, 15, 1114133, 589824, 15, 1114134, 589824, 15, 1114135, 589824, 15, 1114136, 589824, 15, 1114137, 589824, 15, 1114138, 589824, 15, 1114139, 589824, 15, 1114140, 589824, 15, 1114141, 589824, 15, 1114142, 589824, 15, 1114143, 589824, 15, 1114144, 589824, 15, 1114145, 720896, 15, 1114118, 524288, 15)
+
+[node name="TileMap2" type="TileMap" parent="BG"]
+texture_filter = 1
+tile_set = SubResource("TileSet_yjaht")
+format = 2
+
+[node name="Continue" type="Button" parent="BG"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -126.0
+offset_top = -54.0
+offset_right = -22.0
+offset_bottom = -22.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.875, 0.875)
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxEmpty_38xqf")
+text = "Continue"
+
+[node name="MainMenu" type="Button" parent="BG"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 34.0
+offset_top = 306.0
+offset_right = 137.0
+offset_bottom = 337.0
+scale = Vector2(0.9, 0.9)
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xxobt")
+text = "Main Menu"
+
+[node name="Text" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Text"]
+
+[node name="Wave_Congrats" type="Label" parent="Text/CanvasLayer"]
+texture_filter = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -103.0
+offset_top = 56.0
+offset_right = 103.0
+offset_bottom = 92.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 26
+horizontal_alignment = 1
+script = ExtResource("4_tauxd")
+
+[node name="Choose_Upgrade" type="Label" parent="Text/CanvasLayer"]
+texture_filter = 1
+offset_left = 103.0
+offset_top = 97.0
+offset_right = 596.0
+offset_bottom = 125.0
+scale = Vector2(0.88, 0.88)
+theme_override_font_sizes/font_size = 20
+text = "Choose your upgrade:"
+horizontal_alignment = 1
+
+[node name="Scrap_Text" type="Label" parent="Text/CanvasLayer"]
+texture_filter = 1
+offset_left = 107.0
+offset_top = 268.0
+offset_right = 299.0
+offset_bottom = 310.0
+scale = Vector2(0.43, 0.43)
+theme_override_font_sizes/font_size = 30
+text = "Scrap Count: "
+
+[node name="Scrap_Count" type="Label" parent="Text/CanvasLayer"]
+texture_filter = 1
+offset_left = 193.0
+offset_top = 266.0
+offset_right = 213.0
+offset_bottom = 289.0
+theme_override_font_sizes/font_size = 16
+script = ExtResource("5_515ir")
+
+[node name="UI_Buttons" type="CanvasLayer" parent="."]
+
+[node name="Upgrade_Buttons" type="HBoxContainer" parent="UI_Buttons"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -155.0
+offset_top = -51.0
+offset_right = 111.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.17, 1.17)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+theme_override_constants/separation = 40
+
+[node name="Health_Upgrade" type="TextureButton" parent="UI_Buttons/Upgrade_Buttons"]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("6_8sg7o")
+
+[node name="Bullet_Speed_Upgrade" type="TextureButton" parent="UI_Buttons/Upgrade_Buttons"]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("6_8sg7o")
+
+[node name="Gun_Uprade" type="TextureButton" parent="UI_Buttons/Upgrade_Buttons"]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("6_8sg7o")
+
+[node name="Upgrade_Icons" type="Node2D" parent="UI_Buttons"]
+
+[node name="Health_Icon" type="AnimatedSprite2D" parent="UI_Buttons/Upgrade_Icons"]
+unique_name_in_owner = true
+texture_filter = 1
+position = Vector2(201, 165)
+scale = Vector2(0.38, 0.38)
+sprite_frames = SubResource("SpriteFrames_84tk6")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Bullet_Speed_Icon" type="AnimatedSprite2D" parent="UI_Buttons/Upgrade_Icons"]
+unique_name_in_owner = true
+texture_filter = 1
+position = Vector2(321, 163)
+scale = Vector2(0.625, 0.681308)
+sprite_frames = SubResource("SpriteFrames_m1kew")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Gun_Icon" type="AnimatedSprite2D" parent="UI_Buttons/Upgrade_Icons"]
+unique_name_in_owner = true
+texture_filter = 1
+position = Vector2(444, 170)
+scale = Vector2(0.625, 0.625)
+sprite_frames = SubResource("SpriteFrames_q52bg")
+animation = &"ak_idle"
+
+[node name="Upgrade_Labels" type="Node2D" parent="UI_Buttons"]
+
+[node name="Inc_Health" type="Label" parent="UI_Buttons/Upgrade_Labels"]
+texture_filter = 1
+offset_left = 169.0
+offset_top = 201.0
+offset_right = 306.0
+offset_bottom = 256.0
+scale = Vector2(0.475, 0.475)
+theme_override_font_sizes/font_size = 18
+text = "Increase Health
+(+10 Health)"
+horizontal_alignment = 1
+
+[node name="Inc_Bullet_Speed" type="Label" parent="UI_Buttons/Upgrade_Labels"]
+texture_filter = 1
+offset_left = 276.0
+offset_top = 201.0
+offset_right = 463.0
+offset_bottom = 256.0
+scale = Vector2(0.475, 0.475)
+theme_override_font_sizes/font_size = 18
+text = "Increase Bullet Speed
+(+25 Speed)"
+horizontal_alignment = 1
+
+[node name="Upg_Gun" type="Label" parent="UI_Buttons/Upgrade_Labels"]
+texture_filter = 1
+offset_left = 413.0
+offset_top = 206.0
+offset_right = 550.0
+offset_bottom = 261.0
+scale = Vector2(0.475, 0.475)
+theme_override_font_sizes/font_size = 18
+text = "Upgrade Gun"
+
+[node name="Scrap_Cost" type="Node2D" parent="UI_Buttons"]
+
+[node name="Health_Cost" type="Label" parent="UI_Buttons/Scrap_Cost"]
+offset_left = 161.0
+offset_top = 233.0
+offset_right = 317.0
+offset_bottom = 293.0
+scale = Vector2(0.5, 0.5)
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("11_cjv7i")
+
+[node name="Bullet_Speed_Cost" type="Label" parent="UI_Buttons/Scrap_Cost"]
+unique_name_in_owner = true
+texture_filter = 1
+offset_left = 273.0
+offset_top = 233.0
+offset_right = 461.0
+offset_bottom = 295.0
+scale = Vector2(0.5, 0.5)
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("12_c15sl")
+
+[node name="Gun_Cost" type="Label" parent="UI_Buttons/Scrap_Cost"]
+unique_name_in_owner = true
+texture_filter = 1
+offset_left = 402.0
+offset_top = 233.0
+offset_right = 554.0
+offset_bottom = 293.0
+scale = Vector2(0.5, 0.5)
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("13_dhpf7")
+
+[node name="Cost_Text" type="Label" parent="UI_Buttons"]
+texture_filter = 1
+offset_left = 109.0
+offset_top = 234.0
+offset_right = 230.0
+offset_bottom = 303.0
+scale = Vector2(0.36, 0.36)
+theme_override_font_sizes/font_size = 50
+text = "Cost:"
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[connection signal="button_down" from="BG/Continue" to="." method="_on_continue_button_down"]
+[connection signal="button_down" from="BG/MainMenu" to="." method="_on_main_menu_button_down"]
+[connection signal="button_down" from="UI_Buttons/Upgrade_Buttons/Health_Upgrade" to="." method="_on_health_upgrade_button_down"]
+[connection signal="mouse_entered" from="UI_Buttons/Upgrade_Buttons/Health_Upgrade" to="." method="_on_health_upgrade_mouse_entered"]
+[connection signal="mouse_exited" from="UI_Buttons/Upgrade_Buttons/Health_Upgrade" to="." method="_on_health_upgrade_mouse_exited"]
+[connection signal="button_down" from="UI_Buttons/Upgrade_Buttons/Bullet_Speed_Upgrade" to="." method="_on_bullet_speed_upgrade_button_down"]
+[connection signal="mouse_entered" from="UI_Buttons/Upgrade_Buttons/Bullet_Speed_Upgrade" to="." method="_on_bullet_speed_upgrade_mouse_entered"]
+[connection signal="mouse_exited" from="UI_Buttons/Upgrade_Buttons/Bullet_Speed_Upgrade" to="." method="_on_bullet_speed_upgrade_mouse_exited"]
+[connection signal="button_down" from="UI_Buttons/Upgrade_Buttons/Gun_Uprade" to="." method="_on_gun_uprade_button_down"]
+[connection signal="mouse_entered" from="UI_Buttons/Upgrade_Buttons/Gun_Uprade" to="." method="_on_gun_upgrade_mouse_entered"]
+[connection signal="mouse_exited" from="UI_Buttons/Upgrade_Buttons/Gun_Uprade" to="." method="_on_gun_upgrade_mouse_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

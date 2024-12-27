@@ -1,0 +1,141 @@
+[gd_scene load_steps=19 format=3 uid="uid://cv6qmbur1c32b"]
+
+[ext_resource type="Texture2D" uid="uid://dkllywmn0jcmp" path="res://assets/sprites/gun(s)/MP5A3/Submachine - MP5A3 [80x48].png" id="1_7e7w2"]
+[ext_resource type="Script" path="res://objects/gun(s)/MP5A3/mp5a3.gd" id="1_f32re"]
+[ext_resource type="Texture2D" uid="uid://b77d83e6jvj42" path="res://assets/sprites/gun(s)/MP5A3/[SHOOT WITH MUZZLE FLASH] Submachine - MP5A3.png" id="2_3j82d"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qr8og"]
+radius = 2.23607
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ss1a7"]
+atlas = ExtResource("1_7e7w2")
+region = Rect2(0, 0, 80, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uyomj"]
+atlas = ExtResource("2_3j82d")
+region = Rect2(0, 0, 80, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1yho6"]
+atlas = ExtResource("2_3j82d")
+region = Rect2(80, 0, 80, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wd8r0"]
+atlas = ExtResource("2_3j82d")
+region = Rect2(160, 0, 80, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5242u"]
+atlas = ExtResource("2_3j82d")
+region = Rect2(240, 0, 80, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3uw22"]
+atlas = ExtResource("2_3j82d")
+region = Rect2(320, 0, 80, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bigxq"]
+atlas = ExtResource("2_3j82d")
+region = Rect2(400, 0, 80, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jy8xx"]
+atlas = ExtResource("2_3j82d")
+region = Rect2(480, 0, 80, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0uhxd"]
+atlas = ExtResource("2_3j82d")
+region = Rect2(560, 0, 80, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x2v4t"]
+atlas = ExtResource("2_3j82d")
+region = Rect2(640, 0, 80, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qk4f"]
+atlas = ExtResource("2_3j82d")
+region = Rect2(720, 0, 80, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rv6sn"]
+atlas = ExtResource("2_3j82d")
+region = Rect2(800, 0, 80, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2fnky"]
+atlas = ExtResource("2_3j82d")
+region = Rect2(880, 0, 80, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5cem5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ss1a7")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uyomj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1yho6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wd8r0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5242u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3uw22")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bigxq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jy8xx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0uhxd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x2v4t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0qk4f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rv6sn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2fnky")
+}],
+"loop": false,
+"name": &"shooting",
+"speed": 35.0
+}]
+
+[node name="MP5A3" type="Area2D"]
+script = ExtResource("1_f32re")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_qr8og")
+
+[node name="WeaponPivot" type="Marker2D" parent="."]
+
+[node name="MPSprite" type="AnimatedSprite2D" parent="WeaponPivot"]
+unique_name_in_owner = true
+texture_filter = 1
+position = Vector2(47, 6)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_5cem5")
+animation = &"shooting"
+autoplay = "idle"
+frame = 11
+frame_progress = 1.0
+
+[node name="ShootPoint" type="Marker2D" parent="WeaponPivot/MPSprite"]
+unique_name_in_owner = true
+position = Vector2(19, -16)
+
+[node name="BurstDelay" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.1
+
+[connection signal="timeout" from="BurstDelay" to="." method="_on_burst_delay_timeout"]

@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1es56udib86q"]
+
+[ext_resource type="TileSet" uid="uid://dnwx7ksm8f7nb" path="res://assets/UI/UI_panels.tres" id="1_mx6q3"]
+[ext_resource type="Texture2D" uid="uid://t7sexhddaw4p" path="res://assets/UI/mouse_left_outline.png" id="2_000aa"]
+[ext_resource type="Texture2D" uid="uid://cu7jelp8r4xk6" path="res://assets/UI/keyboard_escape_outline.png" id="3_gd2us"]
+
+[node name="TutorialScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2(0.475, 0.475)
+tile_set = ExtResource("1_mx6q3")
+format = 2
+layer_0/tile_data = PackedInt32Array(-65541, 524288, 12, -131068, 720896, 12, 65540, 720896, 15, 131067, 524288, 15, -5, 524288, 13, 65531, 524288, 14, -65532, 720896, 13, 4, 720896, 14, -131070, 589824, 12, -131069, 655360, 12, -65537, 589824, 12, -131072, 589824, 12, -131071, 655360, 12, -65539, 655360, 12, -65538, 655360, 12, -65540, 589824, 12, 131068, 589824, 15, 131069, 655360, 15, 131070, 589824, 15, 131071, 655360, 15, 65536, 589824, 15, 65537, 655360, 15, 65538, 589824, 15, 65539, 655360, 15, -4, 589824, 13, 65532, 589824, 14, -3, 655360, 13, 65533, 655360, 14, -2, 589824, 13, 65534, 589824, 14, -1, 655360, 13, 65535, 655360, 14, -65536, 589824, 13, 0, 589824, 14, -65535, 655360, 13, 1, 655360, 14, -65534, 589824, 13, 2, 589824, 14, -65533, 655360, 13, 3, 655360, 14)
+
+[node name="Mouse_Icon" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-30, -1.42109e-14)
+scale = Vector2(0.21, 0.21)
+texture = ExtResource("2_000aa")
+
+[node name="Esc_Icon" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(7, 0)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_gd2us")
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = -24.0
+offset_top = -5.0
+offset_right = 21.0
+offset_bottom = 18.0
+scale = Vector2(0.425, 0.425)
+text = "Shoot"
+
+[node name="Label2" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 13.0
+offset_top = -5.0
+offset_right = 60.0
+offset_bottom = 18.0
+scale = Vector2(0.445, 0.445)
+text = "Pause"

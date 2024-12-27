@@ -1,0 +1,139 @@
+[gd_scene load_steps=19 format=3 uid="uid://bvawi46rpchl0"]
+
+[ext_resource type="Script" path="res://objects/gun(s)/AK47/ak_47.gd" id="1_ltnoa"]
+[ext_resource type="Texture2D" uid="uid://c5ap8wlo81boi" path="res://assets/sprites/gun(s)/AK47/AK 47 [96x48].png" id="1_t0f6m"]
+[ext_resource type="Texture2D" uid="uid://dftxnhm5y1qob" path="res://assets/sprites/gun(s)/AK47/[SHOOT WITH MUZZLE FLASH] FULL AUTO - AK 47.png" id="2_gydog"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7m6mx"]
+radius = 0.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6mj3o"]
+atlas = ExtResource("1_t0f6m")
+region = Rect2(0, 0, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nlc1g"]
+atlas = ExtResource("2_gydog")
+region = Rect2(0, 0, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tsc7d"]
+atlas = ExtResource("2_gydog")
+region = Rect2(96, 0, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ljrk"]
+atlas = ExtResource("2_gydog")
+region = Rect2(192, 0, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_inqhx"]
+atlas = ExtResource("2_gydog")
+region = Rect2(288, 0, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hun0x"]
+atlas = ExtResource("2_gydog")
+region = Rect2(384, 0, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jb8ls"]
+atlas = ExtResource("2_gydog")
+region = Rect2(480, 0, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_57a75"]
+atlas = ExtResource("2_gydog")
+region = Rect2(576, 0, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h0cl2"]
+atlas = ExtResource("2_gydog")
+region = Rect2(672, 0, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d7bd1"]
+atlas = ExtResource("2_gydog")
+region = Rect2(768, 0, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mpetj"]
+atlas = ExtResource("2_gydog")
+region = Rect2(864, 0, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xwxmx"]
+atlas = ExtResource("2_gydog")
+region = Rect2(960, 0, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jpkyw"]
+atlas = ExtResource("2_gydog")
+region = Rect2(1056, 0, 96, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w14bo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6mj3o")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nlc1g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tsc7d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ljrk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_inqhx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hun0x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jb8ls")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_57a75")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h0cl2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d7bd1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mpetj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xwxmx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jpkyw")
+}],
+"loop": false,
+"name": &"shooting",
+"speed": 35.0
+}]
+
+[node name="AK47" type="Area2D"]
+script = ExtResource("1_ltnoa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_7m6mx")
+
+[node name="WeaponPivot" type="Marker2D" parent="."]
+
+[node name="AKSprite" type="AnimatedSprite2D" parent="WeaponPivot"]
+unique_name_in_owner = true
+texture_filter = 1
+position = Vector2(45, 4)
+scale = Vector2(0.375, 0.375)
+sprite_frames = SubResource("SpriteFrames_w14bo")
+animation = &"shooting"
+autoplay = "idle"
+
+[node name="ShootPoint" type="Marker2D" parent="WeaponPivot/AKSprite"]
+unique_name_in_owner = true
+position = Vector2(29, -12)
+
+[node name="BurstDelay" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.1
+
+[connection signal="timeout" from="BurstDelay" to="." method="_on_burst_delay_timeout"]

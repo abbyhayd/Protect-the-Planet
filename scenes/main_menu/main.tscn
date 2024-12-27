@@ -1,0 +1,79 @@
+[gd_scene load_steps=7 format=3 uid="uid://bb0jy2q87m81i"]
+
+[ext_resource type="Script" path="res://scenes/main_menu/main.gd" id="1_t2q6v"]
+[ext_resource type="Texture2D" uid="uid://cj5imksxeawpf" path="res://assets/background/MainBG.png" id="2_tja6w"]
+[ext_resource type="TileSet" uid="uid://dnwx7ksm8f7nb" path="res://assets/UI/UI_panels.tres" id="3_iny6n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wm2sy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ur1vm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0l28v"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_t2q6v")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_right = 640.0
+offset_bottom = 360.0
+texture = ExtResource("2_tja6w")
+stretch_mode = 3
+metadata/_edit_lock_ = true
+
+[node name="TileMap" type="TileMap" parent="CanvasLayer/TextureRect"]
+texture_filter = 1
+tile_set = ExtResource("3_iny6n")
+format = 2
+layer_0/tile_data = PackedInt32Array(786447, 524288, 16, 786448, 589824, 16, 786449, 589824, 20, 786450, 589824, 20, 786451, 589824, 20, 786452, 589824, 20, 786453, 589824, 20, 786454, 589824, 20, 851991, 655360, 17, 851992, 720896, 17, 917528, 720896, 19, 917527, 589824, 19, 851990, 655360, 17, 851989, 655360, 17, 851988, 655360, 17, 851987, 655360, 17, 851986, 655360, 17, 851985, 655360, 17, 851984, 655360, 17, 917520, 589824, 19, 917519, 524288, 19, 851983, 524288, 17, 917521, 589824, 19, 917522, 589824, 19, 917523, 589824, 19, 917524, 589824, 19, 917525, 589824, 19, 786456, 720896, 20, 786455, 589824, 20, 917526, 589824, 19, 983055, 524288, 20, 1179663, 524288, 20, 983056, 589824, 20, 983057, 655360, 20, 983058, 589824, 20, 983059, 655360, 20, 983060, 589824, 20, 983061, 655360, 20, 983062, 589824, 20, 983063, 655360, 20, 1179664, 589824, 20, 1179665, 655360, 20, 1179666, 589824, 20, 1179667, 655360, 20, 1179668, 589824, 20, 1179669, 655360, 20, 1179670, 589824, 20, 1179671, 655360, 20, 983064, 720896, 20, 1048600, 720896, 21, 1179672, 720896, 20, 1245208, 720896, 21, 1114134, 589824, 23, 1114135, 655360, 23, 1114136, 720896, 23, 1048598, 589824, 21, 1048599, 655360, 21, 1048596, 589824, 21, 1048597, 655360, 21, 1048594, 589824, 21, 1048595, 655360, 21, 1048592, 589824, 21, 1048593, 655360, 21, 1245200, 589824, 21, 1245201, 655360, 21, 1245202, 589824, 21, 1245203, 655360, 21, 1245204, 589824, 21, 1245205, 655360, 21, 1245206, 589824, 21, 1245207, 655360, 21, 1310742, 589824, 23, 1310743, 655360, 23, 1310744, 720896, 23, 1310740, 589824, 23, 1310741, 655360, 23, 1310738, 589824, 23, 1310739, 655360, 23, 1310736, 589824, 23, 1310737, 655360, 23, 1114128, 589824, 23, 1114129, 655360, 23, 1114130, 589824, 23, 1114131, 655360, 23, 1114132, 589824, 23, 1114133, 655360, 23, 1048591, 524288, 22, 1114127, 524288, 23, 1245199, 524288, 22, 1310735, 524288, 23)
+
+[node name="Title" type="Label" parent="CanvasLayer/TextureRect"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.411
+anchor_right = 0.5
+anchor_bottom = 0.411
+offset_left = -201.0
+offset_top = -28.32
+offset_right = 201.0
+offset_bottom = 35.68
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 46
+text = "Protect the Planet"
+
+[node name="Play" type="Button" parent="CanvasLayer/TextureRect"]
+texture_filter = 1
+layout_mode = 2
+offset_left = 242.0
+offset_top = 193.0
+offset_right = 398.0
+offset_bottom = 239.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wm2sy")
+text = "Play"
+
+[node name="Credits" type="Button" parent="CanvasLayer/TextureRect"]
+texture_filter = 1
+layout_mode = 2
+offset_left = 242.0
+offset_top = 241.0
+offset_right = 399.0
+offset_bottom = 287.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ur1vm")
+text = "Credits"
+
+[node name="Quit" type="Button" parent="CanvasLayer/TextureRect"]
+texture_filter = 1
+layout_mode = 2
+offset_left = 243.0
+offset_top = 289.0
+offset_right = 398.0
+offset_bottom = 334.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0l28v")
+text = "Quit"
+
+[connection signal="button_down" from="CanvasLayer/TextureRect/Play" to="." method="_on_play_button_down"]
+[connection signal="button_down" from="CanvasLayer/TextureRect/Credits" to="." method="_on_credits_button_down"]
+[connection signal="button_down" from="CanvasLayer/TextureRect/Quit" to="." method="_on_quit_button_down"]

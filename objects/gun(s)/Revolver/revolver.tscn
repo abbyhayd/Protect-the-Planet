@@ -1,0 +1,124 @@
+[gd_scene load_steps=17 format=3 uid="uid://dtkkim5usmuso"]
+
+[ext_resource type="Script" path="res://objects/gun(s)/Revolver/revolver.gd" id="1_l14rh"]
+[ext_resource type="Texture2D" uid="uid://csjst8fnpu7mm" path="res://assets/sprites/gun(s)/Revolver/Revolver - Colt 45 [64x32].png" id="2_j41gr"]
+[ext_resource type="Texture2D" uid="uid://b2wusydjolxmj" path="res://assets/sprites/gun(s)/Revolver/[SHOOT WITH MUZZLE FLASH] Revolver - Colt 45.png" id="3_ktlep"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wq3oj"]
+radius = 0.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xjjel"]
+atlas = ExtResource("2_j41gr")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v5tir"]
+atlas = ExtResource("3_ktlep")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jhg7f"]
+atlas = ExtResource("3_ktlep")
+region = Rect2(64, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_74oac"]
+atlas = ExtResource("3_ktlep")
+region = Rect2(128, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otb4f"]
+atlas = ExtResource("3_ktlep")
+region = Rect2(192, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x3tsd"]
+atlas = ExtResource("3_ktlep")
+region = Rect2(256, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4kwkk"]
+atlas = ExtResource("3_ktlep")
+region = Rect2(320, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7emql"]
+atlas = ExtResource("3_ktlep")
+region = Rect2(384, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kw33q"]
+atlas = ExtResource("3_ktlep")
+region = Rect2(448, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c3xs3"]
+atlas = ExtResource("3_ktlep")
+region = Rect2(512, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1pq0f"]
+atlas = ExtResource("3_ktlep")
+region = Rect2(576, 0, 64, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8cp53"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xjjel")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v5tir")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jhg7f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_74oac")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_otb4f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x3tsd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4kwkk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7emql")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kw33q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c3xs3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1pq0f")
+}],
+"loop": false,
+"name": &"shooting",
+"speed": 35.0
+}]
+
+[node name="Revolver" type="Area2D"]
+texture_filter = 1
+script = ExtResource("1_l14rh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_wq3oj")
+
+[node name="WeaponPivot" type="Marker2D" parent="."]
+rotation = 0.00582912
+
+[node name="RevolverSprite" type="AnimatedSprite2D" parent="WeaponPivot"]
+unique_name_in_owner = true
+position = Vector2(41.0002, -0.0932679)
+scale = Vector2(0.366873, 0.366873)
+sprite_frames = SubResource("SpriteFrames_8cp53")
+animation = &"shooting"
+autoplay = "idle"
+frame = 9
+frame_progress = 1.0
+
+[node name="ShootPoint" type="Marker2D" parent="WeaponPivot/RevolverSprite"]
+unique_name_in_owner = true
+position = Vector2(15.9747, -4.67611)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
