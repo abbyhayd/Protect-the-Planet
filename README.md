@@ -5,6 +5,7 @@ See how long you can survive!
 
 ## Project Background
 Created for Mini Jam 174: Defense. The limitation was "Only one resource", and I decided for the scraps to be the one resource.
+Ranked #35 out of 102 overall.
 I still have more ideas to implement which I plan on doing in the coming weeks.
 
 ## Project Experience
